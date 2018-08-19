@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <!-- <script src="main.js"></script> --> 
+</head>
+<body>
+    <div id="app" v-cloak style="width:500px;margin:0 auto;">
+        <div class="message">
+            <v-input v-model="name"></v-input>
+            <v-textarea v-model="message" ref="message"></v-textarea>
+            <button @click="handleSend">发布</button>
+        </div>
+        <list :list="list" @replay="handleReplay" @remove="handleRemove"></list>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+    <script src="list.js"></script>
+    <script src="Input.js"></script>
+    <script src="index.js"></script>
+    
+</body>
+</html>
